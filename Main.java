@@ -1,77 +1,57 @@
 public class Main {
-    public static void main(String[] args) {
-        
-	System.out.println("PongBall b1 = new PongBall(5,10,2,4);");
-        PongBall b1 = new PongBall(5,10,2,4);
-
-	System.out.println("PongBall b2 = new PongBall(0,0,1,2);");
-        PongBall b2 = new PongBall(0,0,1,2);
-
-        System.out.println();
-        System.out.println("b1.getX() should be 5: " + b1.getX());
-	System.out.println("b1.getY() should be 10: " + b1.getY());
-        System.out.println("b2.getX() should be 0: " + b2.getX());
-	System.out.println("b2.getY() should be 0: " + b2.getY());
-
-        System.out.println();
-	System.out.println("b1.move();");
-        b1.move();
-	System.out.println("b2.move();");
-        b2.move();
-
-        System.out.println();
-        System.out.println("b1.getX() should be 7: " + b1.getX());
-	System.out.println("b1.getY() should be 14: " + b1.getY());
-        System.out.println("b2.getX() should be 1: " + b2.getX());
-	System.out.println("b2.getY() should be 2: " + b2.getY());
-
-        System.out.println();
-	System.out.println("b1.move();");
-        b1.move();
-	System.out.println("b2.move();");
-        b2.move();
-
-        System.out.println();
-        System.out.println("b1.getX() should be 9: " + b1.getX());
-	System.out.println("b1.getY() should be 18: " + b1.getY());
-        System.out.println("b2.getX() should be 2: " + b2.getX());
-	System.out.println("b2.getY() should be 4: " + b2.getY());
-
-        System.out.println();
-	System.out.println("b1.bounceX();");
-        b1.bounceX();
-	System.out.println("b2.bounceX();");
-        b2.bounceX();
-
-        System.out.println();
-	System.out.println("b1.move();");
-        b1.move();
-	System.out.println("b2.move();");
-        b2.move();        
-
-        System.out.println();
-        System.out.println("b1.getX() should be 7: " + b1.getX());
-	System.out.println("b1.getY() should be 22: " + b1.getY());
-        System.out.println("b2.getX() should be 1: " + b2.getX());
-	System.out.println("b2.getY() should be 6: " + b2.getY());
-
-        System.out.println();
-	System.out.println("b1.bounceY();");
-        b1.bounceY();
-	System.out.println("b2.bounceY();");
-        b2.bounceY();
-
-        System.out.println();
-	System.out.println("b1.move();");
-        b1.move();
-	System.out.println("b2.move();");
-        b2.move();
-
-        System.out.println();
-        System.out.println("b1.getX() should be 5: " + b1.getX());
-	System.out.println("b1.getY() should be 18: " + b1.getY());
-        System.out.println("b2.getX() should be 0: " + b2.getX());
-	System.out.println("b2.getY() should be 4: " + b2.getY());
+        public static void main(String[] args) {
+            
+            System.out.println("PongPaddle pp1 = new PongPaddle(10,20,15,20);");
+            PongPaddle pp1 = new PongPaddle(10,20,15,20);
+            System.out.println("PongPaddle pp2 = new PongPaddle(100,200,20,30);");
+            PongPaddle pp2 = new PongPaddle(100,200,20,30);
+    
+            System.out.println();
+            System.out.println("pp1.getTopY() should be 10: " + pp1.getTopY());
+            System.out.println("pp1.getLeftX() should be 20: " + pp1.getLeftX());
+            System.out.println("pp2.getTopY() should be 100: " + pp2.getTopY());
+            System.out.println("pp2.getLeftX() should be 200: " + pp2.getLeftX());
+    
+            System.out.println();
+            System.out.println("pp1.getBottomY() should be 29: " + pp1.getBottomY());
+            System.out.println("pp1.getRightX() should be 34: " + pp1.getRightX());
+            System.out.println("pp2.getBottomY() should be 129: " + pp2.getBottomY());
+            System.out.println("pp2.getRightX() should be 219: " + pp2.getRightX());
+    
+            System.out.println();
+            System.out.println("pp1.moveDown(5);");
+            pp1.moveDown(5);
+            System.out.println("pp2.moveDown(10);");
+            pp2.moveDown(10);
+    
+            System.out.println();
+            System.out.println("pp1.getTopY() should be 15: " + pp1.getTopY());
+            System.out.println("pp1.getLeftX() should be 20: " + pp1.getLeftX());
+            System.out.println("pp2.getTopY() should be 110: " + pp2.getTopY());
+            System.out.println("pp2.getLeftX() should be 200: " + pp2.getLeftX());
+    
+            System.out.println();
+            System.out.println("pp1.getBottomY() should be 34: " + pp1.getBottomY());
+            System.out.println("pp1.getRightX() should be 34: " + pp1.getRightX());
+            System.out.println("pp2.getBottomY() should be 139: " + pp2.getBottomY());
+            System.out.println("pp2.getRightX() should be 219: " + pp2.getRightX());
+    
+            System.out.println();
+            System.out.println("pp1.moveUp(10);");
+            pp1.moveUp(10);
+            System.out.println("pp2.moveUp(20);");
+            pp2.moveUp(20);
+    
+            System.out.println();
+            System.out.println("pp1.getTopY() should be 5: " + pp1.getTopY());
+            System.out.println("pp1.getLeftX() should be 20: " + pp1.getLeftX());
+            System.out.println("pp2.getTopY() should be 90: " + pp2.getTopY());
+            System.out.println("pp2.getLeftX() should be 200: " + pp2.getLeftX());
+    
+            System.out.println();
+            System.out.println("pp1.getBottomY() should be 24: " + pp1.getBottomY());
+            System.out.println("pp1.getRightX() should be 34: " + pp1.getRightX());
+            System.out.println("pp2.getBottomY() should be 119: " + pp2.getBottomY());
+            System.out.println("pp2.getRightX() should be 219: " + pp2.getRightX());
+        }
     }
-}
-

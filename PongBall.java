@@ -1,9 +1,9 @@
 public class PongBall 
 {
-    double x;
-    double y;
-    double velX;
-    double velY;
+    int x;
+    int y;
+    int velX;
+    int velY;
     
     public PongBall(int initX, int initY, int initXVel, int initYVel)
     {
@@ -13,11 +13,11 @@ public class PongBall
         this.velY=initYVel;
     }
 
-    public double getY()
+    public int getY()
     {
         return y;
     }
-    public double getX()
+    public int getX()
     {
         return x;
     } 
