@@ -1,4 +1,4 @@
-import java.awt.*;
+
 
 public class PongPaddle 
 {
@@ -6,7 +6,7 @@ public class PongPaddle
     public int y;
     public int width;
     public int height;
-    private Rectangle paddle = new  Rectangle( x,  y,  width,  height);
+    
     public PongPaddle(int top,int left,int w,int h)
     {
         y=top;
@@ -18,27 +18,28 @@ public class PongPaddle
     }
     public int getBottomY()
     {
-        return (int)(paddle.getY()+paddle.getWidth());
+        return y+height-1;
     }
     public int getTopY()
     {
-        return (int)(paddle.getY());
+        return y;
     }
     public int getRightX()
     {
-        return (int)(paddle.getX()+paddle.getHeight());
+        return x+width-1;
     }
     public int getLeftX()
     {
-        return (int)(paddle.getX());
+        return x;
     }
     public void moveDown(int pixels)
     {
-        y-=pixels;
+        y+=pixels;
+
     }
     public void moveUp(int pixels)
     {
-        y+=pixels;
+        y-=pixels;
     }
     
 }
